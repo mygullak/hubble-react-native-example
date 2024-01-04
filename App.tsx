@@ -8,7 +8,6 @@
 import React from 'react';
 import {
   Button,
-  NativeModules,
   StyleSheet,
   View
 } from 'react-native';
@@ -17,7 +16,6 @@ import { openHubble } from 'hubble-react-native-sdk';
 
 
 function App(): React.JSX.Element {
-  console.log(NativeModules.HubbleFlutterUI);
 
   return (
     <View style={styles.container}>
@@ -29,10 +27,10 @@ function App(): React.JSX.Element {
             appVersion: 'appVersion',
             appBuildNumber: 'appBuildNumber',
             appPackageName: 'appPackageName',
-            clientId: '',
+            clientId: 'kahdsf',
             clientSecret: 'clientSecret',
           }
-        )}
+        ).catch(console.error)}
       />
     </View>
   );

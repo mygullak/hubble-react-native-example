@@ -29,7 +29,7 @@ function App(): React.JSX.Element {
             appVersion: 'appVersion',
             appBuildNumber: 'appBuildNumber',
             appPackageName: 'appPackageName',
-            clientId: 'niyo',
+            clientId: '',
             clientSecret: 'clientSecret',
           }
         )}

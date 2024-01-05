@@ -7,7 +7,7 @@ Example React Native app that integrates with Hubble SDK. Hubble is written in f
 
 ### iOS
 
-
+> `Note`:  iOS binaries are shipped as **release*** in latest tag of npm package. if you need debug version of framework, please install npm package with @debug tag.
 
 ```
 npm install
@@ -29,7 +29,7 @@ Once installed
 
 Your pods project should detect hubble-react-native-sdk and install it.
 
-But hubble requires few more steps to get it working for your iOS project.
+But hubble requires **few more steps** to get it working for your iOS project.
 
 import helper ruby file that's shipped with sdk in your `ios/Podfile`
 
@@ -64,7 +64,7 @@ pod update HubbleFrameworks_Release --no-repo-update
 
 
 
-After this open your iOS project in xcode code link/copy libraries
+After this **open your iOS project in xcode** code link/copy libraries
 
 <image src="docs/linking.png">
 
@@ -99,7 +99,7 @@ dependencyResolutionManagement {
         mavenCentral()
         // Add the new repositories starting on the next line...
         maven {
-            url '../node_modules/hubble-react-native-sdk/android_libs/repo'
+            url '../node_modules/hubble-react-android-binaries/android_libs/repo'
             // This is relative to the location of the build.gradle file
             // if using a relative path.
         }

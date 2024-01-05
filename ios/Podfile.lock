@@ -71,11 +71,11 @@ PODS:
   - hermes-engine (0.73.1):
     - hermes-engine/Pre-built (= 0.73.1)
   - hermes-engine/Pre-built (0.73.1)
-  - hubble-react-native-sdk (0.1.39):
+  - hubble-react-native-sdk (1.0.4):
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
-  - HubbleFrameworks_Release (0.1.39)
+  - HubbleFrameworks_Release (1.0.3)
   - Intercom (15.2.3)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
@@ -1149,7 +1149,7 @@ DEPENDENCIES:
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - hubble-react-native-sdk (from `../node_modules/hubble-react-native-sdk`)
-  - HubbleFrameworks_Release (from `../node_modules/hubble-react-native-sdk/hubble_ios_frameworks/Hubble_Release.podspec`)
+  - HubbleFrameworks_Release (from `../node_modules/hubble-react-ios-binaries/hubble_ios_frameworks/Hubble_Debug.podspec`)
   - Intercom (= 15.2.3)
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
@@ -1235,7 +1235,7 @@ EXTERNAL SOURCES:
   hubble-react-native-sdk:
     :path: "../node_modules/hubble-react-native-sdk"
   HubbleFrameworks_Release:
-    :podspec: "../node_modules/hubble-react-native-sdk/hubble_ios_frameworks/Hubble_Release.podspec"
+    :podspec: "../node_modules/hubble-react-ios-binaries/hubble_ios_frameworks/Hubble_Debug.podspec"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -1338,8 +1338,8 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
   hermes-engine: 34df9d5034e90bd9bf1505e1ca198760373935af
-  hubble-react-native-sdk: b22a5bab7b430e34f29c02fdc9cc3b7f0fbed950
-  HubbleFrameworks_Release: 3ee270e5882dacbf318e14094f5784b90d40fac9
+  hubble-react-native-sdk: b52fd8d2140c5fad2791362ebcd7698c33734921
+  HubbleFrameworks_Release: 4d8a457f6de1635da9220adf5eba0653178cfddd
   Intercom: 9bffad96cc66d42cfd971b37807d6dc49d5bb914
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c

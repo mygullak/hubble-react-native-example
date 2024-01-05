@@ -7,7 +7,7 @@ Example React Native app that integrates with Hubble SDK. Hubble is written in f
 
 ### iOS
 
-> `Note`:  iOS binaries are shipped as **release*** in latest tag of npm package. if you need debug version of framework, please install npm package with @debug tag.
+> `Note`:  iOS binaries are shipped as **release*** in latest tag of npm package. if you need debug version of framework, please install npm package with @debug tag. (SDK won't work on release mode in iOS simulator)
 
 ```
 npm install

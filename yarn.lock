@@ -3816,23 +3816,23 @@ http-errors@2.0.0:
     statuses "2.0.1"
     toidentifier "1.0.1"
 
-hubble-react-android-binaries@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.npmjs.org/hubble-react-android-binaries/-/hubble-react-android-binaries-1.0.10.tgz"
-  integrity sha512-FeC1m26OXJcJEk97ArDMNYJAwfI2G26taWExhyXSZNqj4n04zIkZOgU41/w3+/vARgGFD+EO3DoG901G97BUXQ==
-
-hubble-react-ios-binaries@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.npmjs.org/hubble-react-ios-binaries/-/hubble-react-ios-binaries-1.0.10.tgz"
-  integrity sha512-/pQx8RKcpwUb+az5vz1MjmkPGQBcO0yxfZCkWIKXj5hVrct42Q687eWdD5GNZxxKtsOcgMioWrXSwT3qxmr9wQ==
-
-hubble-react-native-sdk@^1.0.13:
+hubble-react-android-binaries@^1.0.13:
   version "1.0.13"
-  resolved "https://registry.npmjs.org/hubble-react-native-sdk/-/hubble-react-native-sdk-1.0.13.tgz"
-  integrity sha512-y/otAR+aYI2cTaIc16c6aqptifdc1CXvqGO9SS9iJAq7OC5LPjeyfYizvfoWU0UcF8FzBVGTqAzs8n61eApzQg==
+  resolved "https://registry.npmjs.org/hubble-react-android-binaries/-/hubble-react-android-binaries-1.0.13.tgz"
+  integrity sha512-SgEJgxsiE4T7GE0J5npOHTQt64/k26jf+7Q9NZVLIffabRsOkSHe6cURVYkm6HjCId4Ld9K1ANEwkIv5SFfqoQ==
+
+hubble-react-ios-binaries@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.npmjs.org/hubble-react-ios-binaries/-/hubble-react-ios-binaries-1.0.13.tgz"
+  integrity sha512-lQEo98qBIMt394W+9C8n0s4li7Y25ANiwWxttkE9HbWjtkuSe0vinkNJNVZxC759OuCx+cS3DaFmco59ejSDvA==
+
+hubble-react-native-sdk@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.npmjs.org/hubble-react-native-sdk/-/hubble-react-native-sdk-1.0.19.tgz"
+  integrity sha512-94KcNn4vJ9b/+s8Hb+LixyXA/fHAsZ3ocl5ZvIpiECJ5tOLUc2qAxns9ekQIcdM18B+rIgVrF45rvOZ5C6DZ/g==
   dependencies:
-    hubble-react-android-binaries "^1.0.10"
-    hubble-react-ios-binaries "^1.0.10"
+    hubble-react-android-binaries "^1.0.13"
+    hubble-react-ios-binaries "^1.0.13"
 
 human-signals@^2.1.0:
   version "2.1.0"

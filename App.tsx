@@ -21,6 +21,7 @@ setupHubble({
   appPackageName: 'appPackageName',
   clientId: 'niyo',
   clientSecret: 'clientSecret',
+  env: "prod"
 })
 
 

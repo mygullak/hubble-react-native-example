@@ -12,7 +12,16 @@ import {
   View
 } from 'react-native';
 
-import { openHubble } from 'hubble-react-native-sdk';
+import { launchHubble, setupHubble } from 'hubble-react-native-sdk';
+
+setupHubble({
+  authToken: '4444444444',
+  appVersion: 'appVersion',
+  appBuildNumber: 'appBuildNumber',
+  appPackageName: 'appPackageName',
+  clientId: 'niyo',
+  clientSecret: 'clientSecret',
+})
 
 
 function App(): React.JSX.Element {
@@ -21,15 +30,8 @@ function App(): React.JSX.Element {
     <View style={styles.container}>
       <Button
         title="Open Flutter"
-        onPress={() => openHubble(
-          {
-            authToken: '4444444444',
-            appVersion: 'appVersion',
-            appBuildNumber: 'appBuildNumber',
-            appPackageName: 'appPackageName',
-            clientId: 'kahdsf',
-            clientSecret: 'clientSecret',
-          }
+        onPress={() => launchHubble(
+
         ).catch(console.error)}
       />
     </View>

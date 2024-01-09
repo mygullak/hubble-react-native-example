@@ -167,3 +167,6 @@ export default App;
 ---
 
 Ran into issues? [File an issue](https://github.com/mygullak/hubble-react-native-example/issues/new) and be available to answer questions. 
+
+Active issues:
+ - [ ] Events are not sent back to react native end atm  

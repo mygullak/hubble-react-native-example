@@ -27,7 +27,7 @@ const HubbleWebview = () => {
       }
   `;
 
-  // Add safe areas add needed
+  // Add safe areas if needed
   return <WebView
     webviewDebuggingEnabled={true} // Disable at your end
     source={{ uri: 'https://gullak-18d3b.web.app/#/' }}

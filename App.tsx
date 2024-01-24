@@ -7,36 +7,41 @@
 
 import React from 'react';
 import {
-  Button,
-  StyleSheet,
-  View
+  StyleSheet
 } from 'react-native';
-
-import { launchHubble, setupHubble } from 'hubble-react-native-sdk';
-
-setupHubble({
-  authToken: '4444444444',
-  appVersion: 'appVersion',
-  appBuildNumber: 'appBuildNumber',
-  appPackageName: 'appPackageName',
-  clientId: 'niyo',
-  clientSecret: 'clientSecret',
-  env: "prod"
-})
+import WebView from 'react-native-webview';
 
 
+
+const HubbleWebview = () => {
+  const injectedJavaScriptBeforeContentLoaded = `
+      window.hubbleParams = function() {
+        return  JSON.stringify(
+          {  
+            authToken: '4444444444',
+            appVersion: 'appVersion',
+            appBuildNumber: 'appBuildNumber',
+            appPackageName: 'appPackageName',
+            clientId: 'niyo',
+            clientSecret: 'clientSecret',
+            env: "prod"
+          }
+        );
+      }
+  `;
+
+  // Add safe areas add needed
+  return <WebView
+    webviewDebuggingEnabled={true} // Disable at your end
+    source={{ uri: 'https://gullak-18d3b.web.app/#/' }}
+    injectedJavaScriptBeforeContentLoaded={injectedJavaScriptBeforeContentLoaded}
+    style={{ flex: 1 }}
+  />;
+}
 function App(): React.JSX.Element {
 
-  return (
-    <View style={styles.container}>
-      <Button
-        title="Open Flutter"
-        onPress={() => launchHubble(
+  return <HubbleWebview />
 
-        ).catch(console.error)}
-      />
-    </View>
-  );
 }
 
 

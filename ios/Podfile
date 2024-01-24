@@ -7,7 +7,6 @@ file = Pod::Executable.execute_command('node', ['-p',
 
 require file
 
-require_relative '../node_modules/hubble-react-native-sdk/hubble_ios_frameworks/hubble_import_helper'
 
 
 
@@ -36,7 +35,6 @@ end
 
 target 'test' do
 
-  install_hubble_modules!()
 
   config = use_native_modules!
 
@@ -67,6 +65,5 @@ target 'test' do
       :mac_catalyst_enabled => false
     )
 
-    hubble_post_install(installer)
   end
 end

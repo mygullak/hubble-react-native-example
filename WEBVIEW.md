@@ -19,7 +19,7 @@ const HubbleWebview = () => {
             appVersion: 'appVersion',
             appBuildNumber: 'appBuildNumber',
             appPackageName: 'appPackageName',
-            clientId: 'youclientid',
+            clientId: 'testclient',
             clientSecret: 'clientSecret',
             env: "prod"
           }

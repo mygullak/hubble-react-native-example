@@ -5,9 +5,12 @@
  * @format
  */
 
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React, { useEffect, useRef } from 'react';
 import {
   BackHandler,
+  Button,
   SafeAreaView
 } from 'react-native';
 import WebView from 'react-native-webview';
@@ -25,7 +28,7 @@ type HubbleParams = {
 
 
 
-const HubbleWebview = () => {
+const HubbleWebview = ({ navigation }: any) => {
 
   const paramsStr = JSON.stringify(
     {
@@ -46,6 +49,7 @@ const HubbleWebview = () => {
 
   const webViewRef = useRef<WebView>(null);
 
+  /// Route back press to webview
   const handleBackButtonPress = () => {
     try {
       webViewRef.current?.injectJavaScript("window.hubbleBackButtonPressed()")
@@ -73,12 +77,38 @@ const HubbleWebview = () => {
       source={{ uri: 'https://store.myhubble.money' }}
       injectedJavaScriptBeforeContentLoaded={injectedJavaScriptBeforeContentLoaded}
       setSupportMultipleWindows={true}
+      onMessage={(event) => {
+        /// Listen to messages from webview
+
+        const data = JSON.parse(event.nativeEvent.data);
+        if (data.type === "closeHostView") {
+          navigation.goBack();
+        }
+      }}
       javaScriptCanOpenWindowsAutomatically={true}
     />
   </SafeAreaView>
 }
+
+
+const HomeScreen = ({ navigation }: any) => {
+  return (
+    <Button
+      title="Open webview"
+      onPress={() => navigation.navigate('Hubble')}
+    />
+  );
+}
+
+
+const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
-  return <HubbleWebview />
+  return <NavigationContainer>
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Hubble" component={HubbleWebview} />
+    </Stack.Navigator>
+  </NavigationContainer>;
 }
 
 export default App;
